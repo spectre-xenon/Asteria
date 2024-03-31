@@ -3,11 +3,7 @@ import { useEffect, useState } from "react";
 const useFetch = (url: string) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
   const [error, setError] = useState<unknown | null>(null);
-=======
-  const [error, setError] = useState<unknown | never | null>(null);
->>>>>>> 55edd1e (feat: added useFetch hook)
 
   useEffect(() => {
     const fetchData = async () => {
