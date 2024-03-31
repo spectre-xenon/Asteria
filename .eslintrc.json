@@ -18,6 +18,7 @@
     "no-relative-import-paths/no-relative-import-paths": [
       "warn",
       { "allowSameFolder": true }
-    ]
+    ],
+    "no-console": "warn"
   }
 }
