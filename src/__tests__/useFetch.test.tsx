@@ -5,9 +5,6 @@ import {
   waitForElementToBeRemoved,
 } from "@testing-library/react";
 import { useFetch } from "@/hooks";
-import * as matchers from "@testing-library/jest-dom/matchers";
-
-expect.extend(matchers);
 
 const MockApp = ({ url }: { url: string }) => {
   const { data, isLoading, error } = useFetch(url);
@@ -31,26 +28,6 @@ describe("useFetch tests", async () => {
     render(<MockApp url={workingUrl} />);
 
     expect(screen.getByRole("heading").textContent).toBe("loading...");
-
-    await waitForElementToBeRemoved(() =>
-      screen.getByRole("heading", { name: "loading..." }),
-    );
-
-    expect(screen.getByRole("heading").textContent).toMatch(
-      JSON.stringify(expectedResult),
-    );
-  });
-
-  it("Fetchs correctly", async () => {
-    const workingUrl = "https://jsonplaceholder.typicode.com/todos/1";
-    const expectedResult = {
-      userId: 1,
-      id: 1,
-      title: "delectus aut autem",
-      completed: false,
-    };
-
-    render(<MockApp url={workingUrl} />);
 
     await waitForElementToBeRemoved(() =>
       screen.getByRole("heading", { name: "loading..." }),
