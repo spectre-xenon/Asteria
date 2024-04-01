@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Dev folders
+.wrangler
+
 # Cache Files
 .eslintjscache
 .prettiercache
