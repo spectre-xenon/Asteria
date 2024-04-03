@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { NavBar } from "@/components";
 
 const Home = () => {
   return (
     <>
-      <Link to="/shop">aaaa</Link>;
+      <NavBar />
+      <h1>Home</h1>
     </>
   );
 };
