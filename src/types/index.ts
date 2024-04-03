@@ -8,3 +8,13 @@ export type item = {
 };
 
 export type useFetchData = item | item[];
+
+// Routes
+type route = {
+  path: string;
+  element: JSX.Element;
+  errorElement?: JSX.Element;
+  children?: route[];
+};
+
+export type routes = route[];

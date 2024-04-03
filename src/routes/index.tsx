@@ -1,22 +1,30 @@
 import { Home, Shop, About, Item, Error } from "@/pages";
+import { Root } from "@/Root";
+import type { routes } from "@/types";
 
-const routes = [
+const routes: routes = [
   {
     path: "/",
-    element: <Home />,
+    element: <Root />,
     errorElement: <Error />,
-  },
-  {
-    path: "/shop",
-    element: <Shop />,
-  },
-  {
-    path: "/shop/:id",
-    element: <Item />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+      {
+        path: "/shop/:id",
+        element: <Item />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
   },
 ];
 
