@@ -4,7 +4,7 @@ import starBg from "@/assets/starBg.png";
 
 const Home = () => {
   return (
-    <div className="flex h-[80vh] items-center justify-center overflow-hidden px-10 md:h-[89vh]">
+    <div className="flex h-[80vh] w-screen items-center justify-center overflow-hidden px-10 md:h-[89vh]">
       <img
         src={starBg}
         alt="stars background"
@@ -37,7 +37,7 @@ const Home = () => {
         </div>
       </div>
       <img
-        className="motion-safe:animate-pulse-slow hidden w-1/2 object-fill md:block"
+        className="hidden w-1/2 object-fill motion-safe:animate-pulse-slow md:block"
         src={pulsarUrl}
         alt="Pulsar star"
       />
