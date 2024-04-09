@@ -6,6 +6,15 @@ export default {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
     },
+    colors:{
+      "white": "#FFFFFF",
+      "black": "#000000",
+      "grey":"#ABABAB",
+      "accent": "#FBCBFB",
+    },
+    animation:{
+      "pulse-slow": "pulse 6s ease-in-out infinite"
+    },
     extend: {},
   },
   plugins: [],
