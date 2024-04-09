@@ -11,3 +11,18 @@
 body {
   @apply max-w-[1920px] bg-black;
 }
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-[10px];
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-black
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-scrollThumb rounded-full hover:bg-white
+}
