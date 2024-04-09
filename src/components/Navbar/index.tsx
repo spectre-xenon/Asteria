@@ -17,7 +17,7 @@ const NavBar = () => {
   const visibilty = isOpen ? "flex" : "hidden";
 
   return (
-    <nav className="flex items-center justify-end px-4 py-2">
+    <nav className="flex items-center justify-end px-4 py-2 md:px-10">
       <Logo />
       {/* Navigation section start */}
       <div
