@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import pulsarUrl from "@/assets/pulsar.png";
-import starBg from "@/assets/starBg.png";
+import pulsarUrl from "@/public/pulsar.png";
+import starBg from "@/public/starBg.png";
 
 const Home = () => {
   return (
