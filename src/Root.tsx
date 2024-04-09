@@ -5,10 +5,10 @@ import "./index.css";
 
 const Root: FC = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <NavBar />
       <Outlet />
-    </>
+    </div>
   );
 };
 
