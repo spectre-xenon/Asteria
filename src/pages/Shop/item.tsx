@@ -10,7 +10,7 @@ const Item: FC = () => {
 
   if (error) return <Navigate to="/error" />;
 
-  return isLoading && <img src={data?.full} alt={data?.name} />;
+  return !isLoading && <img src={data?.full} alt={data?.name} />;
 };
 
 export { Item };
