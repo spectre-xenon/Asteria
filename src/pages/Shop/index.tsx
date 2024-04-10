@@ -19,8 +19,8 @@ const Shop: FC = () => {
   };
 
   return (
-    <>
-      <div className="flex flex-col items-center gap-4 p-4 md:flex-row md:items-stretch md:justify-between md:gap-0 md:px-10 md:py-8">
+    <div className="w-[99.35vw]">
+      <div className="flex w-full flex-col items-center gap-4 p-4 md:flex-row md:items-stretch md:justify-between md:gap-0 md:px-10 md:py-8">
         <h1 className="text-2xl font-semibold tracking-widest md:text-4xl">
           Black-hole Forgery
         </h1>
@@ -46,7 +46,7 @@ const Shop: FC = () => {
           )}
         </select>
       </div>
-      <main className=" row-auto grid grid-cols-1 gap-y-20 p-10 md:grid-cols-4 md:gap-x-36">
+      <main className=" auto-grid-min md:grid-cols-auto-fit-100 grid w-full auto-rows-auto gap-y-20 p-10 md:gap-x-36">
         {data?.map((item) => {
           const shouldShow = item.category.some(
             (category) => category === currCategory,
@@ -64,7 +64,7 @@ const Shop: FC = () => {
           );
         })}
       </main>
-    </>
+    </div>
   );
 };
 

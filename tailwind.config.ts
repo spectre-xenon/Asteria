@@ -17,7 +17,11 @@ export default {
     animation:{
       "pulse-slow": "pulse 6s ease-in-out infinite"
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns:{
+        'auto-fit-100': 'repeat(auto-fit, minmax(250px, 1fr))',
+      }
+    },
   },
   plugins: [],
 } satisfies Config;

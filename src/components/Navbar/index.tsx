@@ -6,9 +6,13 @@ import { VectorStrip } from "./VectorStrip";
 import { Menu } from "./Menu";
 import { useState } from "react";
 import { Spacer } from "@/components";
+import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  const width = pathname === "/shop" ? "w-[99.35vw]" : "w-screen";
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -17,7 +21,9 @@ const NavBar = () => {
   const visibilty = isOpen ? "flex" : "hidden";
 
   return (
-    <nav className="flex w-screen items-center justify-end px-4 py-2 md:px-10">
+    <nav
+      className={`${width} flex items-center justify-end  px-4 py-2 transition-all ease-in-out md:px-10`}
+    >
       <Logo />
       {/* Navigation section start */}
       <div
