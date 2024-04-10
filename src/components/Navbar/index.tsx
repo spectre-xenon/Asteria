@@ -22,12 +22,12 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`${width} flex items-center justify-end  px-4 py-2 transition-all ease-in-out md:px-10`}
+      className={`${width}  flex items-center  justify-end px-4 py-2 transition-all  md:px-10`}
     >
       <Logo />
       {/* Navigation section start */}
       <div
-        className={`top absolute z-[11] flex flex-col-reverse items-center gap-8 motion-safe:transition-all md:relative md:top-0 md:flex md:flex-row ${position}`}
+        className={`ease-out-cubic absolute z-[11] flex flex-col-reverse items-center gap-8 transition-all duration-300 md:relative md:top-0 md:flex md:flex-row ${position}`}
       >
         <VectorStrip className="top-[5rem] z-[-1] md:left-10 md:top-auto" />
         <NavLinks className="z-[11]" />

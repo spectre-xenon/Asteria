@@ -20,6 +20,9 @@ export default {
     extend: {
       gridTemplateColumns:{
         'auto-fit-100': 'repeat(auto-fit, minmax(250px, 1fr))',
+      },
+      transitionTimingFunction:{
+        "out-cubic": "cubic-bezier(0.33, 1, 0.68, 1)",
       }
     },
   },
