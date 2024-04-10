@@ -1,5 +1,5 @@
 import { Logo } from "./logo";
-import { Cart } from "./Cart";
+import { Cart } from "@/components";
 import { NavLinks } from "./NavLinks";
 import { Profile } from "./Profile";
 import { VectorStrip } from "./VectorStrip";
