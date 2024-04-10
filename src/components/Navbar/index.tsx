@@ -18,7 +18,7 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
-  const visibilty = isOpen ? "flex" : "hidden";
+  const position = isOpen ? "top-20" : "top-[-202px]";
 
   return (
     <nav
@@ -27,7 +27,7 @@ const NavBar = () => {
       <Logo />
       {/* Navigation section start */}
       <div
-        className={`absolute top-20 z-[11] flex-col-reverse items-center gap-8 md:relative md:top-0 md:flex md:flex-row ${visibilty}`}
+        className={`top absolute z-[11] flex flex-col-reverse items-center gap-8 motion-safe:transition-all md:relative md:top-0 md:flex md:flex-row ${position}`}
       >
         <VectorStrip className="top-[5rem] z-[-1] md:left-10 md:top-auto" />
         <NavLinks className="z-[11]" />

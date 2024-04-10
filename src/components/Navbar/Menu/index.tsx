@@ -7,7 +7,7 @@ const Menu: FC<{ handleClick: () => void; className?: string }> = ({
   return (
     <button
       onClick={handleClick}
-      className={`rounded-full bg-white px-7 py-2 md:hidden ${className}`}
+      className={`relative rounded-full bg-white px-7 py-2 md:hidden ${className}`}
     >
       <svg
         width="18"
