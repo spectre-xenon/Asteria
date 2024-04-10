@@ -12,7 +12,7 @@ const Cart: FC<{ className?: string; haveItems: boolean }> = ({
         className={classes}
         width="29"
         height="27"
-        viewBox="0 0 29 27"
+        viewBox="0 0 31 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -29,7 +29,7 @@ const Cart: FC<{ className?: string; haveItems: boolean }> = ({
       className={classes}
       width="25"
       height="25"
-      viewBox="0 0 25 25"
+      viewBox="0 0 31 27"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

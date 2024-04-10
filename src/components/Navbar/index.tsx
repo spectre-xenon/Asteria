@@ -13,30 +13,32 @@ const NavBar = () => {
   const { pathname } = useLocation();
 
   const width = pathname === "/shop" ? "w-[99.35vw]" : "w-screen";
+  const leftPos = pathname === "/shop" ? "left-[79%]" : "left-auto";
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const position = isOpen ? "top-20" : "top-[-202px]";
+  const position = isOpen ? "translate-y-44" : "-translate-y-44";
 
   return (
     <nav
-      className={`${width}  flex items-center  justify-end px-4 py-2 transition-all  md:px-10`}
+      className={`${width} relative flex items-center  justify-end px-4 py-2 transition-all  md:px-10`}
     >
+      <div className="absolute z-[12] h-full w-28 -translate-y-4 translate-x-5 rounded-full bg-black md:hidden"></div>
       <Logo />
       {/* Navigation section start */}
       <div
-        className={`ease-out-cubic absolute z-[11] flex flex-col-reverse items-center gap-8 transition-all duration-300 md:relative md:top-0 md:flex md:flex-row ${position}`}
+        className={`absolute ${leftPos} rotate- z-[11] flex flex-col-reverse items-center gap-8 transition-all duration-300 ease-out-cubic md:static md:top-0 md:flex md:translate-y-0 md:flex-row ${position}`}
       >
-        <VectorStrip className="top-[5rem] z-[-1] md:left-10 md:top-auto" />
+        <VectorStrip className="tra top-[5rem] z-[-1] md:left-10 md:top-auto" />
         <NavLinks className="z-[11]" />
         <Profile />
       </div>
       {/* Navigation section end */}
       <Spacer className="order-3" />
       <Cart className="order-2 md:order-last" haveItems={true} />
-      <Menu className="z-[11] order-last" handleClick={handleClick} />
+      <Menu className="relative z-[12] order-last" handleClick={handleClick} />
     </nav>
   );
 };
