@@ -29,23 +29,16 @@ const Shop: FC = () => {
         <select
           onChange={handleSelection}
           className="rounded-full border-b-2 bg-black px-4 py-2 tracking-[0.2rem] outline-none "
+          value={currCategory}
         >
-          {currCategory === "none" ? (
-            <option selected value="none">
-              None
+          <option key="none" value="none">
+            None
+          </option>
+          {categories?.map((category) => (
+            <option key={category} value={category}>
+              {category}
             </option>
-          ) : (
-            <option value="none">None</option>
-          )}
-          {categories?.map((category) =>
-            currCategory === category ? (
-              <option selected value={category}>
-                {category}
-              </option>
-            ) : (
-              <option value={category}>{category}</option>
-            ),
-          )}
+          ))}
         </select>
       </div>
       <main className=" auto-grid-min grid w-full auto-rows-auto gap-y-20 p-10 md:grid-cols-auto-fit-100 md:gap-x-36">
@@ -56,6 +49,7 @@ const Shop: FC = () => {
           if (!shouldShow && currCategory !== "none") return;
           return (
             <Card
+              key={item.id}
               id={item.id}
               name={item.name}
               price={item.price}

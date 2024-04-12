@@ -22,7 +22,9 @@ const Card: FC<{
       <div className="flex h-[15%] w-full rounded-b-lg bg-card pl-2 pt-2">
         <div className="flex h-full flex-1 flex-col items-start gap-1 ">
           {categorys.map((category) => (
-            <p className="text-sm text-grey">{category}</p>
+            <p key={category} className="text-sm text-grey">
+              {category}
+            </p>
           ))}
           <Link to={to}>
             <p className="mt-auto pb-2 text-2xl leading-6 md:text-xl">{name}</p>
