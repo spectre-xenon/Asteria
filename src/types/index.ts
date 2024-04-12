@@ -1,3 +1,5 @@
+import { Dispatch } from "react";
+
 export type item = {
   id: number;
   name: string;
@@ -18,3 +20,22 @@ type route = {
 };
 
 export type routes = route[];
+
+export type cartDataType = {
+  [id: number]: { amount: number };
+};
+
+export type action =
+  | {
+      type: "incrementAndUpdate" | "decrementAndUpdate" | "removeAndUpdate";
+      id: number;
+    }
+  | { type: "initialData"; data: cartDataType };
+
+export type cartDispatch = Dispatch<action>;
+
+export type useCartReturn = {
+  cartData: cartDataType;
+  cartDispatch: cartDispatch;
+  isLoading: boolean;
+};
