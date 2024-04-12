@@ -10,6 +10,5 @@ export const onRequest = async (context) => {
     })
     .reduce((a, b): number => a + b, 0);
 
-  const reply = subtotal?.toFixed(2);
-  return Response.json({ reply });
+  return Response.json({ subtotal });
 };

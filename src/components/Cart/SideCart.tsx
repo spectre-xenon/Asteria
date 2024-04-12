@@ -11,6 +11,7 @@ const SideCart: FC<{
 }> = ({ isOpen, handleClick, cartData, cartDispatch }) => {
   const [subtotal, setSubtotal] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  console.log(subtotal);
 
   useEffect(() => {
     const fetchSubtotal = async () => {
@@ -83,7 +84,7 @@ const SideCart: FC<{
       <div className="absolute bottom-0 left-0 flex w-full flex-col justify-between gap-5 bg-white p-4">
         <div className="flex justify-between border-b-2 border-black py-2">
           <p className="text-black">Subtotal:</p>
-          <p className="text-black">{isLoading ? "Fetching..." : subtotal}</p>
+          <p className="text-black">{isLoading ? "Fetching..." : subtotal} Zing</p>
         </div>
         <Link to="/">
           <button className="w-full rounded-full bg-black p-4 transition-transform ease-in-out hover:scale-105">
