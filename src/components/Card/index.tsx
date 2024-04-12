@@ -10,6 +10,7 @@ const Card: FC<{
   handleClick: () => void;
 }> = ({ id, name, price, imageSrc, categorys, handleClick }) => {
   const to = `/shop/${id}`;
+
   return (
     <div className="h-[650px] w-full md:h-[580px] md:w-[250px] ">
       <Link to={to}>
@@ -18,7 +19,7 @@ const Card: FC<{
           src={imageSrc}
         />
       </Link>
-      <div className="bg-card flex h-[15%] w-full rounded-b-lg pl-2 pt-2">
+      <div className="flex h-[15%] w-full rounded-b-lg bg-card pl-2 pt-2">
         <div className="flex h-full flex-1 flex-col items-start gap-1 ">
           {categorys.map((category) => (
             <p className="text-sm text-grey">{category}</p>

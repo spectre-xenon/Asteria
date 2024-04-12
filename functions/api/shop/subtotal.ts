@@ -8,7 +8,7 @@ export const onRequest = async (context) => {
     .map((key) => {
       if (items[key]) return items[Number(key)].price * res[key].amount;
     })
-    .reduce((a, b) => a + b, 0);
+    .reduce((a, b): number => a + b, 0);
 
   const reply = subtotal?.toFixed(2);
   return Response.json({ reply });
