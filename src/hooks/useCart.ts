@@ -17,6 +17,7 @@ const reducer = (state: cartDataType, action: action): cartDataType => {
     if (state[id] === undefined) {
       state[id] = { amount: 1 };
       updateLocalStorage("cart", state);
+      alert("Added item to cart");
       return { ...state };
     }
 
