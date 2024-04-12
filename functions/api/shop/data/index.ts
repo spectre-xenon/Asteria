@@ -52,7 +52,7 @@ export const items: item[] = [
   {
     id: 5,
     name: "Class S\nweapon",
-    price: Infinity,
+    price: 99999,
     category: ["Weapons"],
     full: "https://utfs.io/f/e6bd4084-c4cd-4443-b6b4-4ee817c7e64f-e481u4.jpg",
     outOfStock: true,
