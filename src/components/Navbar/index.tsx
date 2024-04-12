@@ -37,7 +37,7 @@ const NavBar = () => {
       </div>
       {/* Navigation section end */}
       <Spacer className="order-3" />
-      <Cart className="order-2 md:order-last" haveItems={true} />
+      <Cart className="order-2 md:order-last" />
       <Menu className="relative z-[12] order-last" handleClick={handleClick} />
     </nav>
   );
