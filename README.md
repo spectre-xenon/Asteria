@@ -1,46 +1,31 @@
-# VRRETTP
+# Asteria 
+![site preview image](https://utfs.io/f/4891dc94-feec-4e09-8f66-c14c5c70e7f0-59fsqg.jpg)
 
-simple project started template for my own use that includes:
+A shopping cart concept with a little stary twist ✨<br/>
 
-- Vite
+Tech used in this project: 
 - React
 - React-router
 - TypeScript
+- Cloudflare Functions (serverless funcitons for backend api)
 - Tailwindcss
 - Eslint
 - Prettier
-  > \[!NOTE]\
-  > Eslint and prettier were configured with appropriate plugins like "eslint-config-prettier", "prettier-plugin-tailwindcss" and "eslint-plugin-no-relative-import-paths"
 
-## Getting Started
+## Development
 
-First install degit:
+After cloning the repo:
 
 ```bash
-# NPM
-npm install -g degit
+npm i
 
-# PNPM
-pnpm add -g degit
-
-# BUN
-bun install -g degit
-```
-
-Then run the following command to create the project directory:
-
-```bash
-degit spectre-xenon/VRRETTP <directory name>
-```
-
-Then:
-
-```bash
-cd <project name>
-
-npm install # Or ur package manager
-
+# Then
 npm run dev
 ```
 
-Enjoy!
+Before stages any changes make sure to run the following command:
+
+```bash
+npm run format 
+```
+for Linting & Formating
