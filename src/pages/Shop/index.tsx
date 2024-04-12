@@ -1,9 +1,11 @@
 import { useFetch } from "@/hooks";
 import { item } from "@/types";
-import { useState, type FC, ChangeEvent } from "react";
+import { useState, type FC, ChangeEvent, useContext } from "react";
 import { Card } from "@/components";
+import { cartContext } from "@/Root";
 
 const Shop: FC = () => {
+  const { cartDispatch } = useContext(cartContext);
   const { data, isLoading, error } = useFetch<item[]>(`/api/shop`);
   const [currCategory, setCurrCategory] = useState("none");
 
@@ -46,7 +48,7 @@ const Shop: FC = () => {
           )}
         </select>
       </div>
-      <main className=" auto-grid-min md:grid-cols-auto-fit-100 grid w-full auto-rows-auto gap-y-20 p-10 md:gap-x-36">
+      <main className=" auto-grid-min grid w-full auto-rows-auto gap-y-20 p-10 md:grid-cols-auto-fit-100 md:gap-x-36">
         {data?.map((item) => {
           const shouldShow = item.category.some(
             (category) => category === currCategory,
@@ -59,7 +61,9 @@ const Shop: FC = () => {
               price={item.price}
               categorys={item.category}
               imageSrc={item.full}
-              handleClick={() => ""}
+              handleClick={() => {
+                cartDispatch({ type: "incrementAndUpdate", id: item.id });
+              }}
             />
           );
         })}
