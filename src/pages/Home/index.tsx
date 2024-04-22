@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-import pulsarUrl from "@/assets/pulsar.png";
 import starBg from "@/assets/starBg.png";
+import { OrbitalPlanet } from "@/components";
 
 const Home = () => {
   return (
-    <div className="flex h-[80vh] w-screen items-center justify-center overflow-hidden px-10 md:h-[89vh]">
+    <div className="flex h-[80vh] w-screen items-center justify-center gap-2 overflow-hidden pl-10 md:h-[89vh]">
       <img
         src={starBg}
         alt="stars background"
         className="absolute left-0 top-0 -z-[1] h-screen w-screen object-cover"
       />
 
-      <div className="flex flex-col gap-8 pl-[rem] ">
+      <div className="flex flex-1 flex-col gap-8 pl-[rem] ">
         <h1 className="text-6xl leading-[5rem] tracking-[0.5rem] md:text-8xl md:leading-[7rem] md:tracking-[1rem]">
           FORGED <br />
           WITH <br />
@@ -36,11 +36,12 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <img
+      <OrbitalPlanet className="hidden flex-[1.5] md:block" />
+      {/* <img
         className="hidden w-1/2 object-fill motion-safe:animate-pulse-slow md:block"
         src={pulsarUrl}
         alt="Pulsar star"
-      />
+      /> */}
     </div>
   );
 };
